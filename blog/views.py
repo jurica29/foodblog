@@ -9,3 +9,6 @@ def index(request):
 
 def specific(request):
     return HttpResponse("This is the specific url")
+
+def article(request,article_id):
+    return HttpResponse(article_id)
