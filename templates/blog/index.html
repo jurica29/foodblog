@@ -4,42 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAILY FOODIE</title>
+    <title>Daily Foodie</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}"/>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}"/>
+
+
 
 </head>
 <body>
 
-<div>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a>Contact</a></li>
-        <li><a>About</a></li>
-    </ul>
-</div>
-
-
-
-
-{% for recipe in recipes %}
-
-<div class="container row mt-5 text-center" style="margin-left: auto; margin-right:auto">
-    <div class="col-lg-6 col-sm-12 mb-3"></div>
-      <div class="card" style="width:28rem; margin: 0 auto">
-        <img src="{{ recipe.recipe.image }}" class="card-img-top"/>
-        <div class="card-body">
-          <h5 class="card-title">{{ recipe.recipe.label }}</h5>  
-          <p class="card-content">{{ recipe.recipe.source }}</p>
-       </div>
+     <div>
+       <ul class="nav justify-content-center">
+          <li><a href="/">Home of Recipes</a></li>
+          <li><a>Foodie Stories</a></li>
+          <li><a>Contact</a></li>
+       </ul>
      </div>
-   </div>
-</div>
 
-{% endfor %}
+      
+     
+     
+      <div class="container row mt-5 text-center" style="margin-left: auto; margin-right:auto">
+        
+       
+      <form class="form-inline mb-3 mt-3">
+        <div class="form-group">
+          <input type="text" name="userText" class="form-control" placeholder="Type some text..." style="display: inline-block; width: 25%;"/>
+          <input type="submit" class="btn btn-primary" value="Search"/>
+        </div>
+      </form>
+
+        {% for recipe in recipes %}
+         
+         <div class="col-lg-4 col-sm-12 mb-4">
+           <div class="card" style="width:18rem; margin: 0 auto">
+             <img src="{{ recipe.recipe.image }}" class="card-img-top"/>
+             <div class="card-body">
+               <h5 class="card-title">{{ recipe.recipe.label }}</h5>
+               <p class="card-content">{{ recipe.recipe.source }}</p>
+
+               <details>
+                 <summary>details</summary>
+                 <p style="margin-top:10px"> {{ recipe.recipe.cuisineType}}</p>
+                 <p> {{ recipe.recipe.ingredientLines}}</p>
+                 <p> {{ recipe.recipe.calories}} kcal</p>
+               </details>
+             </div>
+           </div>
+         </div>
+      
+         {% endfor %}
+    
+
+          
+      </div>
+
+
+
 
 
 
