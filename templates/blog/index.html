@@ -25,9 +25,21 @@
 
 
 
+{% for recipe in recipes %}
 
+<div class="container row mt-5 text-center" style="margin-left: auto; margin-right:auto">
+    <div class="col-lg-6 col-sm-12 mb-3"></div>
+      <div class="card" style="width:28rem; margin: 0 auto">
+        <img src="{{ recipe.recipe.image }}" class="card-img-top"/>
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.recipe.label }}</h5>  
+          <p class="card-content">{{ recipe.recipe.source }}</p>
+       </div>
+     </div>
+   </div>
+</div>
 
-
+{% endfor %}
 
 
 
