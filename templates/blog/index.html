@@ -30,7 +30,7 @@
       <div class="container row mt-5 text-center" style="margin-left: auto; margin-right:auto">
         
        
-      <form class="form-inline mb-3 mt-3">
+      <form method="post" action="{% url 'search' %}" class="form-inline mb-3 mt-3">
         <div class="form-group">
           <input type="text" name="userText" class="form-control" placeholder="Type some text..." style="display: inline-block; width: 25%;"/>
           <input type="submit" class="btn btn-primary" value="Search"/>
