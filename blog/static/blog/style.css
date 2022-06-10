@@ -5,11 +5,12 @@ ul {
     margin:0;
     padding:0;
     overflow:hidden;
-    background:#333; 
+    background:#ed7966; 
     position:absolute;
     top:0;
     left:0;
     width:100%;
+    font-weight: bold;
 }
 
 li {
@@ -28,4 +29,8 @@ li a {
     text-decoration:none;
     padding:14px 16px;
     text-align:center;
+}
+
+footer {
+    background:#ed7966;
 }
