@@ -1,8 +1,8 @@
 from django.db import models
+# Django authentication framework is located within the below
 from django.contrib.auth.models import User
 
-# Create your models here.
-
+# Models
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
