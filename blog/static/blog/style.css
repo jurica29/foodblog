@@ -1,4 +1,12 @@
+h1 {
+    font-size: 22px;
+    color: #ed7966;
+}
 
+p {
+    font-size: 12px;
+    color: #ed7966;
+}
 
 ul {
     list-style-type: none;

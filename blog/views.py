@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Post
 
 import requests
 
@@ -29,7 +30,7 @@ def search(request):
     else: 
         return render(request, "blog/index.html")
 
-def about(request):
+def articles(request):
     return render(request,'blog/articles.html')
 
 def contact(request):

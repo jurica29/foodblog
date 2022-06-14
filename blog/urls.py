@@ -10,7 +10,7 @@ urlpatterns = [
 
     path('search', views.search, name="search"),
 
-    path('articles', views.search, name="articles"),
+    path('articles', views.articles, name="articles"),
 
-    path('contact', views.search, name="contact")
+    path('contact', views.contact, name="contact")
 ]
